@@ -18,6 +18,7 @@ export default class Login extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+
     log_in() {
         this.setState({
             notification: ""
@@ -38,16 +39,19 @@ export default class Login extends Component {
             .then(data => {
     
                 if (data === "User Verified") {
-                    document.location.replace(`/profile?method=username&value=${this.state.usernameInput}`)             
+                    this.props.handleSuccessfulLogin();
+                    this.props.history.push('/profile')             
                 }
                 else {
                     this.setState({
                         notification: "Incorrect Username/Password. Try again"
                     })
+                    this.props.handleUnsuccessfulLogin();
                     console.log("Incorrect Login")
                 }
             })
             .catch(error => console.log(error))
+
         }
         else {
             // Email Verification
@@ -64,7 +68,8 @@ export default class Login extends Component {
             .then(data => {
                 if (data === "User Verified") {
                     console.log("Success!")
-                    document.location.replace(`profile?method=email&value=${this.state.usernameInput}`)
+                    this.props.handleSuccessfulLogin();
+                    this.props.history.push('/profile')
 
                 }
                 else {
@@ -72,6 +77,7 @@ export default class Login extends Component {
                         notification: "Incorrect Email/Password. Try again"
                     })
                     console.log("Incorrect Login")
+                    this.props.handleUnsuccessfulLogin();
                 }
             })
             .catch(error => console.log(error))
@@ -84,7 +90,7 @@ export default class Login extends Component {
         })
     }
 
-
+    
 
     render() {
         return (

@@ -14,6 +14,13 @@ const NavigationComponent = (props) => {
                 <NavLink to="/signup">
                     Sign Up
                 </NavLink>
+
+                { props.loggedInStatus === "LOGGED_IN" ? (
+                    <NavLink to="/game">
+                        Game
+                    </NavLink>)
+                    : null    
+                }
             </div>
         </div>
     )

@@ -10,19 +10,14 @@ export default class Profile extends Component {
     }
 
     render() {
-        if (this.props.login == null) {
-            return (
-                <div>
-                    You are not logged in. Log in to access this page
-                </div>
-            )
-        }
-        else {
-            return (
-                <div>
-                    You are logged in!
-                </div>
-            )
-        }
+        return (
+            <div>
+                {this.props.loggedInStatus === "LOGGED_IN" ? (
+                    <p>You are Logged In!</p>
+                ) : (
+                    <p>You are not Logged In!</p>
+                )}
+            </div>
+        )
     }
 }
