@@ -1,0 +1,115 @@
+.header {
+    padding: 20px;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    float: right;
+    border: 1px solid #eeeeee;
+    transition: 0.4s ease-in-out;
+    border-radius: 2px
+}
+
+.header a:hover {
+    background-color: #eeeeee;
+    color: rgb(44, 44, 44);
+}
+
+.header > .signup-text {
+    color: #eeeeee
+}
+
+.input-wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#email {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(44, 44, 44);
+    margin-top: 9px;
+    width: 50%;
+}
+
+#username {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(44, 44, 44);
+    margin-top: 9px;
+    width: 50%;
+}
+
+#displayName {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(44, 44, 44);
+    margin-top: 9px;
+    width: 50%;
+}   
+
+#password {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(44, 44, 44);
+    margin-top: 9px;
+    width: 50%;
+}
+
+#passwordConfirmation {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgb(44, 44, 44);
+    margin-top: 9px;
+    width: 50%;
+}
+
+.submit-btn {
+    width: 20%;
+    color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+    border: 1px solid rgb(44, 44, 44);
+    transition: 0.4s ease-in-out;
+    border-radius: 2px
+}
+
+.submit-btn:hover {
+    color: #eeeeee;
+    background-color: rgb(44, 44, 44);
+    cursor: pointer;
+}
+
+.notification {
+    color: red;
+    font-size: 0.8em;
+}
+
+.redirecting {
+    font-size: 0.8em
+}

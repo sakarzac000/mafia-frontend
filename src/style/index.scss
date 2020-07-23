@@ -1,0 +1,36 @@
+.app-wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    padding: 20px;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header a {
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    float: right;
+    border: 1px solid #eeeeee;
+    transition: 0.4s ease-in-out;
+    border-radius: 2px
+}
+
+.header a:hover {
+    background-color: #eeeeee;
+    color: rgb(44, 44, 44);
+}
+
+.intro-section {
+    background-color: #eeeeee;
+    height: calc(100% - 90px)
+}
