@@ -25,7 +25,7 @@ export default class Login extends Component {
     
         if (this.state.usernameInput.indexOf('@') == -1) {
             //Username Verification
-            fetch('http://127.0.0.1:5000/user/verification', {
+            fetch('https://mafia-api-zzs.herokuapp.com/user/verification', {
                 method: 'POST',
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({
@@ -51,7 +51,7 @@ export default class Login extends Component {
         }
         else {
             // Email Verification
-            fetch('http://127.0.0.1:5000/user/verification', {
+            fetch('https://mafia-api-zzs.herokuapp.com/user/verification', {
                 method: 'POST',
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({

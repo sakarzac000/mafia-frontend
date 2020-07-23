@@ -83,7 +83,7 @@ export default class SignUp extends Component {
     
         if (this.state.passwordInput === this.state.passwordConfirmationInput) {
             console.log('password confirmed')
-            fetch('http://127.0.0.1:5000/user/create', {
+            fetch('https://mafia-api-zzs.herokuapp.com/user/create', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"
@@ -116,7 +116,7 @@ export default class SignUp extends Component {
                         redirectNotif: "Account creation successful! Redirecting to Login..."
                     })
                     setTimeout(() => {
-                        document.location.replace('http://127.0.0.1:3000/login')
+                        document.location.replace('https://mafia-api-zzs.herokuapp.com/login')
                     }, 3000)
     
                 }
