@@ -44,6 +44,10 @@ export default class Game extends Component {
                 })
             }
 
+            else if(data == "Pinged!") {
+                this.props.history.push('start')
+            }
+
         })            
     }
 
